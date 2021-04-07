@@ -11,10 +11,10 @@ script:
 
 # create prod env
 after_success:
-  - docker build -t multi-client ./client
-  - docker build -t multi-nginx ./nginx
-  - docker build -t multi-server ./server
-  - docker build -t multi-worker ./worker
+  - docker build -t neeruram/multi-client ./client
+  - docker build -t neeruram/multi-nginx ./nginx
+  - docker build -t neeruram/multi-server ./server
+  - docker build -t neeruram/multi-worker ./worker
 #log into docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
 # push the images to docker hub
